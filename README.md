@@ -7,7 +7,7 @@
 
 # 実行方法
 Bootシーンを開いて実行
-bash```
+```bash
 Assets/Scenes/Boot.unity
 ```
 操作はカーソルキーでプレイヤーキャラを移動
@@ -22,7 +22,7 @@ Eidtorの上部メニューから
 AssetBundle/AssetBundles name setting を選択でアセットバンドル対象ファイルのAsset Labelsの名前をファイルのパスに合わせて変更させる
 ビルドされる対象ファイルはファイルもしくはディレクトリ名の末尾に@bundleがあるものを対象とする
 例）
-bash```
+```bash
 Assets/Sample1@bundle
 Assets/Sample2/img@bundle.png
 ```
@@ -32,14 +32,14 @@ AssetBundle/Bundle を選択でアセットバンドルをビルド
 ビルドされる対象ファイルはファイルもしくはディレクトリ名の末尾に@bundleがあるものを
 
 ビルドされたファイルは
-bash```
+```bash
 ./AssetBundles/
 ```
 に保存される
 
 Eidtorの上部メニューから
 AssetBundle/Copy AssetBundles To StreamingAssets を選択でビルドされたアセットバンドルを
-bash```
+```bash
 ./Assets/StreamingAssets
 ```
 にコピーする
@@ -48,11 +48,11 @@ Projectタブ内のファイルを右クリックで表示されるコンテキ�
 AssetBundle/Copy AssetBundles Path を選択でアセットバンドルをロードする際に使用するパスのソースコードをクリップボードにコピーする
 使用対象ファイルはアセットバンドル化させる前のファイル
 例)
-bash```
+```bash
 Assets/AssetBundle/bullet@bundle/PlayerBullet.prefab"
 ```
 のファイルで実行した場合
-bash```
+```bash
 "assets/assetbundle/bullet.assetbundle", "assets/assetbundle/bullet@bundle/playerbullet.prefab",
 ```
 をクリップボードにコピーする
