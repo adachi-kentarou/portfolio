@@ -6,14 +6,23 @@
 * Editor Visual Studio 2017
 
 # 実行方法
-Bootシーンを開いて実行  
+* EditorのBootシーンを開いて実行  
 ```bash
 Assets/Scenes/Boot.unity
 ```
+* 実行ファイル
+動作環境 windows10 64bit  
+ディレクトリの  
+```bash
+/Build/portfolio.exe
+```
+を実行  
+
 操作はカーソルキーでプレイヤーキャラを移動  
 Aキーで弾を発射  
 敵が一定間隔で出現しランダム方向に移動する  
 敵は弾が当たるか画面外に出ると消える  
+エスケープキーでゲーム終了  
 
 # 機能紹介
 UnityEditor機能拡張でアセットバンドルの名前変更、  
