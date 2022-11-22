@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 609436563
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: assets/assetbundle/bullet.assetbundle
+      Dependencies: {}
+    Info_1:
+      Name: assets/assetbundle/character.assetbundle
+      Dependencies: {}
