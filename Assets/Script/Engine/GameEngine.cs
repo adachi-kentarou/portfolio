@@ -76,6 +76,11 @@ namespace Engine
 		private float m_enemySpawnInterval = 2f;
 
 		/// <summary>
+		/// 敵サイズ
+		/// </summary>
+		private Vector3 m_enemySize = Vector3.one * 0.5f;
+
+		/// <summary>
 		/// 現在出現間隔時間
 		/// </summary>
 		private float m_nowEnemyInterval;
@@ -134,6 +139,7 @@ namespace Engine
 
 					Input.InputManager.GetInstance().AddInput(param);
 
+					// A
 					param = new Input.InputParam(
 						KeyCode.A,
 						Input.InputType.Interval,
@@ -157,13 +163,25 @@ namespace Engine
 						// 敵インスタンス初期化
 						var t_pos = new Vector3(UnityEngine.Random.Range(-150f, 150f), UnityEngine.Random.Range(-150f, 150f), 0f);
 						var t_bullet = (Character.Enemy)Pool.PoolManager.GetInstance().RequestObject(m_enemyPoolName);
-						t_bullet.Init(t_pos, Vector3.one, Quaternion.identity);
+						t_bullet.Init(t_pos, m_enemySize, Quaternion.identity);
 
+					}
+
+					// ゲーム終了キー入力追加
+					if (UnityEngine.Input.GetKey(KeyCode.Escape) == true)
+					{
+						m_state = GameEngineState.End;
 					}
 
 					break;
 				case GameEngineState.End:
-					break;
+						// ゲーム終了追加	
+#if UNITY_EDITOR
+						UnityEditor.EditorApplication.isPlaying = false;
+#else
+						Application.Quit();		
+#endif
+						break;
 			}
 
 			// 入力更新
