@@ -87,4 +87,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_moveVal: 100
-  m_hitBulletRadius: 200
+  m_hitBulletRadius: 400
