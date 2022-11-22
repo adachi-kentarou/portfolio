@@ -66,6 +66,7 @@ namespace Character
 
 				if (diffPos.sqrMagnitude < m_hitBulletRadius)
 				{
+					t_bullet.Remove();
 					this.Remove();
 					return;
 				}
